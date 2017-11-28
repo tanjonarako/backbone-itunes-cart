@@ -1,4 +1,4 @@
-# Backbone Itunes Cart
+# Demo
 
 Here is an Itunes Cart using BackboneJs.
 

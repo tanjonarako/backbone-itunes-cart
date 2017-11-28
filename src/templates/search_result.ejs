@@ -1,0 +1,19 @@
+<% if (results.length > 0) { %>
+    <h2>List</h2>
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Track name</th>
+                <th scope="col">Add to cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% results.forEach(function(song){ %>
+            <tr>
+                <td><%= song.trackName %></td>
+                <td><button type="button" data-id="<%= song.trackId %>" class="btn btn-secondary btn-add cursor-pointer" <% if (song.disabled ) { %> disabled <% } %> >Add</button></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+<% } %>

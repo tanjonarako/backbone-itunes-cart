@@ -1,0 +1,19 @@
+<% if (results.length > 0) { %>
+    <h2>Cart</h2>
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Track name</th>
+                <th scope="col">Remove to cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% results.forEach(function(song){ %>
+            <tr>
+                <td><%= song.trackName %></td>
+                <td><button type="button" data-id="<%= song.trackId %>" class="btn btn-secondary btn-remove cursor-pointer">Remove</button></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+<% } %>

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`views:CartView should render a list 1`] = `
+"
+    <h2>Cart</h2>
+    <table class=\\"table table-bordered\\">
+        <thead class=\\"thead-light\\">
+            <tr>
+                <th scope=\\"col\\">Track name</th>
+                <th scope=\\"col\\">Remove to cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>Shape of you</td>
+                <td><button type=\\"button\\" data-id=\\"1\\" class=\\"btn btn-secondary btn-remove cursor-pointer\\">Remove</button></td>
+            </tr>
+            
+            <tr>
+                <td>Perfect</td>
+                <td><button type=\\"button\\" data-id=\\"2\\" class=\\"btn btn-secondary btn-remove cursor-pointer\\">Remove</button></td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+"
+`;

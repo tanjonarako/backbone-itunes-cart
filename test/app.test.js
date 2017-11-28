@@ -1,6 +1,5 @@
 import Backbone from "backbone";
 import AppView from "../src/app";
-import sinon from "sinon";
 
 describe('views:AppView', function() {
     it('should render a list', function() {

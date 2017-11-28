@@ -14,7 +14,6 @@ You have to install node.js in your machine in order to use npm command.
 
 ```
 Clone the repo GIT: git@github.com:tanjonarako/backbone-itunes-cart.git
-
 ```
 
 Then you have to install the modules

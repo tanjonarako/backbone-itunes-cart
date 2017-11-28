@@ -1,4 +1,4 @@
-# Demo
+# Backbone Itunes Cart
 
 Here is an Itunes Cart using BackboneJs.
 
@@ -37,7 +37,7 @@ npm run test
 ```
 And run the option a to run all test
 
-## Running the application directly
+## Demo
 
 You can also run the application with https://tanjonarako.github.io/backbone-itunes-cart/build/index.html
 

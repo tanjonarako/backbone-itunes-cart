@@ -37,6 +37,14 @@ npm run test
 ```
 And run the option a to run all test
 
+## Running the application directly
+
+You can also run the application with this url:
+
+```
+https://tanjonarako.github.io/backbone-itunes-cart/build/index.html
+```
+
 ## Built With
 
 * [Backbone](http://backbonejs.org/) - The web framework used

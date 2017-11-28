@@ -1,5 +1,4 @@
 import $ from "jquery";
-import _ from "underscore";
 import Backbone from "backbone";
 import template from "../templates/search_result.ejs";
 
@@ -11,7 +10,7 @@ const SearchResult = Backbone.View.extend({
     },
 
     initialize: function(options){
-        _.extend(this, _.pick(options, 'collection', 'handleAddToCart'));
+        this.handleAddToCart = options.handleAddToCart;
 
         //Listen to the reset of the search collection when there is a new search by the user
         this.listenTo(this.collection, 'reset', this.render);

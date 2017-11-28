@@ -1,6 +1,5 @@
 import $ from "jquery";
 import Backbone from "backbone";
-import _ from "underscore";
 import template from "../templates/search_bar.ejs";
 
 const SearchBar = Backbone.View.extend({
@@ -11,7 +10,7 @@ const SearchBar = Backbone.View.extend({
     },
 
     initialize: function(options){
-        _.extend(this, _.pick(options, 'handleSubmit'));
+        this.handleSubmit = options.handleSubmit;
 
         this.render();
     },

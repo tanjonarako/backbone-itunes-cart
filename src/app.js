@@ -1,6 +1,5 @@
 import $ from "jquery";
 import Backbone from "backbone";
-import _ from "underscore";
 import SearchResultCollection from "./models/songs";
 import CartCollection from "./models/cart";
 import SearchBarView from "./views/search_bar";

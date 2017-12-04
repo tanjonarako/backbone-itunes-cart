@@ -14,8 +14,11 @@ describe('views:AppView', function() {
         appView.searchCollection.add({trackId: '1', trackName: 'Shape of you', artistName: 'Ed Sheeran'});
         appView.searchCollection.add({trackId: '2', trackName: 'Perfect', artistName: 'Ed Sheeran'});
 
+        const firstSong = appView.searchCollection.get({trackId: '1'});
+
         appView._addToCart('1');
 
+        expect(firstSong.attributes.disabled).toBe(true);
         expect(appView.cartCollection.length).toEqual(1);
     });
 
@@ -25,8 +28,11 @@ describe('views:AppView', function() {
         appView.searchCollection.add({trackId: '1', trackName: 'Shape of you', artistName: 'Ed Sheeran'});
         appView.cartCollection.add({trackId: '1', trackName: 'Shape of you', artistName: 'Ed Sheeran'});
 
+        const firstSong = appView.searchCollection.get({trackId: '1'});
+
         appView._removeFromCart('1');
 
+        expect(firstSong.attributes.disabled).toBe(false);
         expect(appView.cartCollection.length).toEqual(0);
     });
 });

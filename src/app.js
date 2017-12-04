@@ -74,7 +74,8 @@ var AppView = Backbone.View.extend({
         const model = this.searchCollection.get(id);
 
         //Disable the button add of the current song in the search result view
-        model.set({disabled: true});
+        if (model)
+            model.set({disabled: true});
 
         //If the song doesn't exist in the cart, add it.
         if (!this.cartCollection.get(id))
@@ -87,7 +88,8 @@ var AppView = Backbone.View.extend({
         const model = this.searchCollection.get(id);
 
         //Enable the button add of the current song in the search result view
-        model.set({disabled: false});
+        if (model)
+            model.set({disabled: false});
 
         //If the song exist in the cart, remove it.
         if (this.cartCollection.get(id))

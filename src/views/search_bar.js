@@ -6,7 +6,8 @@ const SearchBar = Backbone.View.extend({
     template: template,
 
     events: {
-        "submit": "_onSubmit"
+        "submit": "_onSubmit",
+        "click .search-form__button": "_onSubmit"
     },
 
     initialize: function(options){
@@ -23,6 +24,7 @@ const SearchBar = Backbone.View.extend({
 
    _onSubmit: async function(e) {
         e.preventDefault();
+
         //Get the name of the artist
         const value = this.$("input[type=search]").val();
 

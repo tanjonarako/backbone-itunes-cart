@@ -18,7 +18,7 @@ describe('views:SearchResult', function() {
         const spy = jest.fn();
         const listSongsView = new SearchResultView({collection: list, handleAddToCart: spy}).render();
 
-        listSongsView.$el.find('.btn-add[data-id=1]').click();
+        listSongsView.$el.find('.js-btn-add[data-id=1]').click();
 
         expect(spy).toBeCalledWith('1');
     });

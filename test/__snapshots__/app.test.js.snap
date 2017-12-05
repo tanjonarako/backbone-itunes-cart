@@ -2,19 +2,31 @@
 
 exports[`views:AppView should render a list 1`] = `
 "<div class=\\"container-fluid text-center\\">
-    <div class=\\"row justify-content-center align-items-center search-bar my-2\\"><form class=\\"form-inline\\">
-    <div class=\\"form-group\\">
-        <input class=\\"inputSearch form-control mr-1\\" type=\\"text\\" placeholder=\\"Search\\">
-        <button type=\\"submit\\" class=\\"btn btn-secondary cursor-pointer\\"><i class=\\"fa fa-search\\" aria-hidden=\\"true\\"></i>Search</button>
+    <header class=\\"justify-content-center align-items-center search-bar\\"> <div class=\\"navbar bg-nav row-flex\\">
+    <p class=\\"navbar-brand m-0 py-0 pr-2\\" href=\\"#\\">
+        <img src=\\"https://www.apple.com/ac/globalnav/3/fr_FR/images/globalnav/apple/image_large.svg\\" width=\\"40\\" height=\\"40\\" class=\\"d-inline-block align-center\\" alt=\\"\\">
+        iTunes
+    </p>
+    <form class=\\"search-form my-2 my-lg-0 col-flex\\">
+        <input class=\\"js-search-input search-form__input bg-dark\\" type=\\"search\\" placeholder=\\"Search\\" aria-label=\\"Search\\">
+        <a class=\\"search-form__button m-0 p-0\\" href=\\"#\\" role=\\"button\\"><img src=\\"https://icongr.am/clarity/search.svg?color=FFFFFF\\" width=\\"20\\"></a>
+    </form>
+</div>
+</header>
+    <div class=\\"tabs list-unstyled row-flex m-0\\">
+        <label class=\\"tabs__item tabs__item--active col-flex m-0\\" for=\\"search-result\\">List</label>
+        <label class=\\"tabs__item col-flex m-0\\" for=\\"cart\\">Cart</label>
     </div>
-</form>
+    <input type=\\"radio\\" id=\\"search-result\\" name=\\"tab\\" value=\\"search\\" checked=\\"checked\\">
+    <input type=\\"radio\\" id=\\"cart\\" name=\\"tab\\" value=\\"tab\\">
+    <div class=\\"js-search-result song-list\\">
+    <div class=\\"empty-list\\"><img src=\\"https://cdn.dribbble.com/users/634336/screenshots/2246883/______1x.png\\"></div>
+
 </div>
-    <div class=\\"row\\">
-        <div class=\\"search-result col\\">
+    <div class=\\"js-cart song-list song-list--cart\\">
+    <div class=\\"empty-list\\"><img src=\\"https://cdn.dribbble.com/users/634336/screenshots/2246883/______1x.png\\"></div>
+
 </div>
-        <div class=\\"cart col\\">
-</div>
-    </div>
 </div>
 "
 `;

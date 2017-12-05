@@ -2,28 +2,25 @@
 
 exports[`views:SearchResult should render a list 1`] = `
 "
-    <h2>List</h2>
-    <table class=\\"table table-bordered\\">
-        <thead class=\\"thead-light\\">
-            <tr>
-                <th scope=\\"col\\">Track name</th>
-                <th scope=\\"col\\">Add to cart</th>
-            </tr>
-        </thead>
-        <tbody>
-            
-            <tr>
-                <td>Shape of you</td>
-                <td><button type=\\"button\\" data-id=\\"1\\" class=\\"btn btn-secondary btn-add cursor-pointer\\">Add</button></td>
-            </tr>
-            
-            <tr>
-                <td>Perfect</td>
-                <td><button type=\\"button\\" data-id=\\"2\\" class=\\"btn btn-secondary btn-add cursor-pointer\\">Add</button></td>
-            </tr>
-            
-        </tbody>
-    </table>
+    <ul class=\\"list-unstyled\\">
+    
+        <li class=\\"song-list__song row-flex p-3\\">
+            <img src=\\"\\" width=\\"60\\" height=\\"60\\">
+            <div class=\\"song-list__song-details pl-3 col-flex\\">
+                <h2 class=\\"song-list__song-name m-0\\">Shape of you</h2>
+                <span class=\\"song-list__song-artist m-0\\">Ed Sheeran</span>
+            </div>
+            <button type=\\"button\\" data-id=\\"1\\" class=\\"js-btn-add song-list__add-to-cart\\"></button></li>
+        
+        <li class=\\"song-list__song row-flex p-3\\">
+            <img src=\\"\\" width=\\"60\\" height=\\"60\\">
+            <div class=\\"song-list__song-details pl-3 col-flex\\">
+                <h2 class=\\"song-list__song-name m-0\\">Perfect</h2>
+                <span class=\\"song-list__song-artist m-0\\">Ed Sheeran</span>
+            </div>
+            <button type=\\"button\\" data-id=\\"2\\" class=\\"js-btn-add song-list__add-to-cart\\"></button></li>
+        
+    </ul>
 
 "
 `;

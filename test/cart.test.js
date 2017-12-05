@@ -18,7 +18,7 @@ describe('views:CartView', function() {
         const spy = jest.fn();
         const cartView = new CartView({collection: list, handleRemoveFromCart: spy}).render();
 
-        cartView.$el.find('.btn-remove[data-id=1]').click();
+        cartView.$el.find('.js-btn-remove[data-id=1]').click();
 
         expect(spy).toBeCalledWith('1');
     });

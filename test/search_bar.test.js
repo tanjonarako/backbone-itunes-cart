@@ -7,8 +7,8 @@ describe('views:SearchBar', function() {
         const spy = jest.fn();
         const searchBarView = new SearchBarView({handleSubmit: spy}).render();
 
-        searchBarView.$el.find('input[type=text]').val('ed sheeran');
-        searchBarView.$el.find('button[type=submit]').click();
+        searchBarView.$el.find('input[type=search]').val('ed sheeran');
+        searchBarView.$el.find('.search-form__button').click();
 
         expect(spy).toBeCalledWith('ed sheeran');
         expect(searchBarView.$el.html()).toMatchSnapshot();

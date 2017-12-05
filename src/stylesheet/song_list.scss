@@ -1,0 +1,43 @@
+.song-list {
+    margin:0 auto;
+    position:absolute;
+    overflow: auto;
+    top: 96px;;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+
+    &--cart {
+        position: absolute;
+        width: 100%;
+        left: 100%;
+        bottom: 0;
+    }
+
+    &__song {
+        border-bottom: 1px solid #f3f3f3;
+    }
+
+    &__song-artist {
+        color: #888;
+    }
+
+    &__song-name {
+        font-size: 18px;
+    }
+
+    &__add-to-cart {
+        background: url(https://icongr.am/clarity/plus-circle.svg) 50% 50% no-repeat;
+        width: 35px;
+
+        &:disabled {
+            background: url(https://icongr.am/clarity/success.svg?color=1a9f60) 50% 50% no-repeat;
+        }
+    }
+
+    &__remove-from-cart {
+        background: url(https://icongr.am/clarity/close.svg) 50% 50% no-repeat;
+        width: 35px;
+    }
+}

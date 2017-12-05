@@ -1,0 +1,29 @@
+.bg-nav {
+    background-color:#3e4a56;
+    width:100%;
+}
+
+.search-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+}
+.search-form {
+    &__input, &__input:focus  {
+        color:#fff;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        border-radius: 0.25rem;
+        outline: none;
+    }
+
+    &__button {
+        position: absolute;
+        right: 25px;
+        top: 16px;;
+    }
+}

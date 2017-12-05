@@ -1,0 +1,63 @@
+.app {
+    width: 375px;
+    height: 667px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    background: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.tabs {
+    background-color: #485a6c;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    height: 40px;
+
+    &__item {
+        padding: 10px 15px 10px 15px;
+        text-transform: uppercase;
+        font-weight: 300;
+        background: none;
+        color:#ccc;
+        cursor: pointer;
+
+        &:hover, &--active {
+            color:white;
+            border-bottom: 4px solid #39cddd;
+        }
+    }
+}
+
+#search-result:checked ~ .js-search-result {
+    transform: translate3d(0, 0, 0);
+    transition: transform 1s;
+}
+
+#search-result:checked ~ .js-cart {
+    transform: translate3d(0, 0, 0); 
+    transition: transform 1s;
+}
+
+#cart:checked ~ .js-search-result {
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 1s;
+}
+
+#cart:checked ~ .js-cart {
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 1s;
+}
+
+.empty-list {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

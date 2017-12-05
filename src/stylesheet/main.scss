@@ -1,0 +1,38 @@
+@import "./app.scss";
+@import "./search_bar.scss";
+@import "./song_list.scss";
+
+html  {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #36D1DC;
+    background: -webkit-linear-gradient(to left, #5B86E5, #36D1DC);
+    background: linear-gradient(to left, #5B86E5, #36D1DC);
+}
+
+button {
+    border: none;
+    cursor : pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input::placeholder {
+    color:#888;
+}
+
+.row-flex {
+    display: flex;
+
+    .col-flex {
+        flex: 1 1 auto;
+    }
+}

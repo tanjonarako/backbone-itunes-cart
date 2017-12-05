@@ -23779,7 +23779,8 @@ var SearchBar = _backbone2.default.View.extend({
     template: _search_bar2.default,
 
     events: {
-        "submit": "_onSubmit"
+        "submit": "_onSubmit",
+        "click .search-form__button": "_onSubmit"
     },
 
     initialize: function initialize(options) {
@@ -23802,6 +23803,7 @@ var SearchBar = _backbone2.default.View.extend({
                     switch (_context.prev = _context.next) {
                         case 0:
                             e.preventDefault();
+
                             //Get the name of the artist
                             value = this.$("input[type=search]").val();
 

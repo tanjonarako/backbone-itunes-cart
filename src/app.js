@@ -12,6 +12,10 @@ var AppView = Backbone.View.extend({
 
     template: template,
 
+    events: {
+        "click .tabs__item": "_addClassActive"
+    },
+
     initialize: function(){
         this.searchCollection = new SearchResultCollection();
         this.cartCollection = new CartCollection();
@@ -43,7 +47,7 @@ var AppView = Backbone.View.extend({
     //The add cart button is in the search result view
    _renderSearchResult: function() {
         var view = new SearchResultView({
-            el              : this.$('.search-result'),
+            el              : this.$('.js-search-result'),
             collection      : this.searchCollection,
             handleAddToCart : this._addToCart.bind(this)
         }).render();
@@ -54,7 +58,7 @@ var AppView = Backbone.View.extend({
     //The remove cart button is in the cart view
    _renderCart: function() {
         var view = new CartView({
-            el                   : this.$('.cart'),
+            el                   : this.$('.js-cart'),
             collection           : this.cartCollection,
             handleRemoveFromCart : this._removeFromCart.bind(this)
         }).render();
@@ -63,6 +67,9 @@ var AppView = Backbone.View.extend({
 
     // Callback to the handleSubmit of the searchBar view
     _submit: function(value) {
+        //Set the search list tab
+        this.$el.find('input[name=tab][value=search]').prop('checked', true);
+
         //Return the promise of the ajax
         //The Function search() call the fetch with the value
         return this.searchCollection.search(value);
@@ -94,6 +101,15 @@ var AppView = Backbone.View.extend({
         //If the song exist in the cart, remove it.
         if (this.cartCollection.get(id))
             this.cartCollection.remove(model);
+    },
+
+    _addClassActive: function(e) {
+        const currentElement = this.$(e.currentTarget);
+
+        this.$('.tabs__item').removeClass('tabs__item--active');
+
+        if (!currentElement.hasClass('tabs__item--active'))
+            currentElement.addClass('tabs__item--active');
     }
 });
 export default AppView;

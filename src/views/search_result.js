@@ -1,12 +1,12 @@
-import $ from "jquery";
 import Backbone from "backbone";
+import $ from "jquery";
 import template from "../templates/search_result.ejs";
 
 const SearchResult = Backbone.View.extend({
     template: template,
 
     events: {
-        "click .btn-add": "_addToCart"
+        "click .js-btn-add": "_addToCart"
     },
 
     initialize: function(options){

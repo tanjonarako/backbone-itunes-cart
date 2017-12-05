@@ -1,5 +1,5 @@
-import $ from "jquery";
 import Backbone from "backbone";
+import $ from "jquery";
 import template from "../templates/search_bar.ejs";
 
 const SearchBar = Backbone.View.extend({
@@ -24,13 +24,13 @@ const SearchBar = Backbone.View.extend({
    _onSubmit: async function(e) {
         e.preventDefault();
         //Get the name of the artist
-        const value = this.$(".inputSearch").val();
+        const value = this.$("input[type=search]").val();
 
         //Wait the response of the Ajax call
         await this.handleSubmit(value);
 
-        //To clean the input
-        this.$(".inputSearch").val('');
+        //Clean the input
+        this.$(".js-search-input").val('');
     }
 });
 export default SearchBar;

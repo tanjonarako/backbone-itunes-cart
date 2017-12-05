@@ -8,6 +8,7 @@ export default Backbone.Model.extend({
         artistName     : '',
         collectionName : '',
         trackName      : '',
+        artworkUrl60   : '',
         disabled       : false
     }
 });

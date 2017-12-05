@@ -1,19 +1,15 @@
 <% if (results.length > 0) { %>
-    <h2>List</h2>
-    <table class="table table-bordered">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">Track name</th>
-                <th scope="col">Add to cart</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% results.forEach(function(song){ %>
-            <tr>
-                <td><%= song.trackName %></td>
-                <td><button type="button" data-id="<%= song.trackId %>" class="btn btn-secondary btn-add cursor-pointer" <% if (song.disabled ) { %> disabled <% } %> >Add</button></td>
-            </tr>
-            <% }); %>
-        </tbody>
-    </table>
-<% } %>
+    <ul class="list-unstyled">
+    <% results.forEach(function(song){ %>
+        <li class="song-list__song row-flex p-3">
+            <img src="<%= song.artworkUrl60 %>" width="60" height="60">
+            <div class="song-list__song-details pl-3 col-flex">
+                <h2 class="song-list__song-name m-0"><%= song.trackName %></h2>
+                <span class="song-list__song-artist m-0"><%= song.artistName %></span>
+            </div>
+            <button type="button" data-id="<%= song.trackId %>" class="js-btn-add song-list__add-to-cart" <% if (song.disabled ) { %> disabled <% } %> ></button></li>
+        <% }); %>
+    </ul>
+<% } else { %>
+    <div class="empty-list"><img src="https://cdn.dribbble.com/users/634336/screenshots/2246883/______1x.png" /></div>
+<% }; %>

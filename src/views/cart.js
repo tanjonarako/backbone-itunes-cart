@@ -6,7 +6,7 @@ const Cart = Backbone.View.extend({
     template: template,
 
     events: {
-        "click .btn-remove": "_removeToCart"
+        "click .js-btn-remove": "_removeToCart"
     },
 
     initialize: function(options){

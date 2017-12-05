@@ -1,7 +1,11 @@
 <div class="container-fluid text-center">
-    <div class="row justify-content-center align-items-center search-bar my-2"></div>
-    <div class="row">
-        <div class="search-result col"></div>
-        <div class="cart col"></div>
+    <header class="justify-content-center align-items-center search-bar"></header>
+    <div class="tabs list-unstyled row-flex m-0">
+        <label class="tabs__item col-flex m-0" for="search-result">List</label>
+        <label class="tabs__item col-flex m-0" for="cart">Cart</label>
     </div>
+    <input type="radio" id="search-result" name="tab" value="search" checked="checked"/>
+    <input type="radio" id="cart" name="tab" value="tab" />
+    <div class="js-search-result song-list"></div>
+    <div class="js-cart song-list song-list--cart"></div>
 </div>

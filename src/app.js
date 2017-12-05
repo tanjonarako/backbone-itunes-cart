@@ -99,8 +99,9 @@ var AppView = Backbone.View.extend({
             model.set({disabled: false});
 
         //If the song exist in the cart, remove it.
-        if (this.cartCollection.get(id))
-            this.cartCollection.remove(model);
+        if (this.cartCollection.get(id)) {
+            this.cartCollection.remove(this.cartCollection.get(id));
+        }
     },
 
     _addClassActive: function() {

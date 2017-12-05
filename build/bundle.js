@@ -21956,8 +21956,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./main.scss", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./main.scss");
+		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./main.scss", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./main.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -21975,7 +21975,7 @@ exports = module.exports = __webpack_require__(92)(undefined);
 
 
 // module
-exports.push([module.i, "html {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background: #36D1DC;\n  background: -webkit-linear-gradient(to left, #5B86E5, #36D1DC);\n  background: linear-gradient(to left, #5B86E5, #36D1DC); }\n\nbutton {\n  border: none;\n  cursor: pointer; }\n  button:focus {\n    outline: none; }\n\n.app {\n  width: 375px;\n  height: 667px;\n  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);\n  background: white;\n  overflow: hidden;\n  position: relative; }\n\n.bg-nav {\n  background-color: #3e4a56;\n  width: 100%; }\n\n.tabs {\n  background-color: #485a6c;\n  position: absolute;\n  top: 56px;\n  left: 0;\n  right: 0;\n  height: 40px; }\n  .tabs__item {\n    padding: 10px 15px 10px 15px;\n    text-transform: uppercase;\n    font-weight: 300;\n    background: none;\n    color: #ccc;\n    cursor: pointer; }\n    .tabs__item:hover, .tabs__item--active {\n      color: white;\n      border-bottom: 4px solid #39cddd; }\n\n.search-bar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  color: white; }\n\n.search-form__input, .search-form__input:focus {\n  color: #fff;\n  border: none;\n  box-shadow: none;\n  width: 100%;\n  padding: 0.375rem 0.75rem;\n  border-radius: 0.25rem;\n  outline: none; }\n\n.search-form__button {\n  position: absolute;\n  right: 25px;\n  top: 16px; }\n\n.song-list {\n  margin: 0 auto;\n  position: absolute;\n  overflow: auto;\n  top: 96px;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  text-align: left; }\n  .song-list--cart {\n    position: absolute;\n    width: 100%;\n    left: 100%;\n    bottom: 0; }\n  .song-list__song {\n    border-bottom: 1px solid #f3f3f3; }\n  .song-list__song-artist {\n    color: #888; }\n  .song-list__song-name {\n    font-size: 18px; }\n  .song-list__add-to-cart {\n    background: url(https://icongr.am/clarity/plus-circle.svg) 50% 50% no-repeat;\n    width: 35px; }\n    .song-list__add-to-cart:disabled {\n      background: url(https://icongr.am/clarity/success.svg?color=1a9f60) 50% 50% no-repeat; }\n  .song-list__remove-from-cart {\n    background: url(https://icongr.am/clarity/close.svg) 50% 50% no-repeat;\n    width: 35px; }\n\n#search-result:checked ~ .js-search-result {\n  transform: translate3d(0, 0, 0);\n  transition: transform 1s; }\n\n#search-result:checked ~ .js-cart {\n  transform: translate3d(0, 0, 0);\n  transition: transform 1s; }\n\n#cart:checked ~ .js-search-result {\n  transform: translate3d(-100%, 0, 0);\n  transition: transform 1s; }\n\n#cart:checked ~ .js-cart {\n  transform: translate3d(-100%, 0, 0);\n  transition: transform 1s; }\n\n.empty-list {\n  position: absolute;\n  width: 100%;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\ninput::placeholder {\n  color: #888; }\n\n.row-flex {\n  display: flex; }\n  .row-flex .col-flex {\n    flex: 1 1 auto; }\n", ""]);
+exports.push([module.i, ".app {\n  width: 375px;\n  height: 667px;\n  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);\n  background: white;\n  overflow: hidden;\n  position: relative; }\n\n.tabs {\n  background-color: #485a6c;\n  position: absolute;\n  top: 56px;\n  left: 0;\n  right: 0;\n  height: 40px; }\n  .tabs__item {\n    padding: 10px 15px 10px 15px;\n    text-transform: uppercase;\n    font-weight: 300;\n    background: none;\n    color: #ccc;\n    cursor: pointer; }\n    .tabs__item:hover, .tabs__item--active {\n      color: white;\n      border-bottom: 4px solid #39cddd; }\n\n#search-result:checked ~ .js-search-result {\n  transform: translate3d(0, 0, 0);\n  transition: transform 1s; }\n\n#search-result:checked ~ .js-cart {\n  transform: translate3d(0, 0, 0);\n  transition: transform 1s; }\n\n#cart:checked ~ .js-search-result {\n  transform: translate3d(-100%, 0, 0);\n  transition: transform 1s; }\n\n#cart:checked ~ .js-cart {\n  transform: translate3d(-100%, 0, 0);\n  transition: transform 1s; }\n\n.empty-list {\n  position: absolute;\n  width: 100%;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.bg-nav {\n  background-color: #3e4a56;\n  width: 100%; }\n\n.search-bar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  color: white; }\n\n.search-form__input, .search-form__input:focus {\n  color: #fff;\n  border: none;\n  box-shadow: none;\n  width: 100%;\n  padding: 0.375rem 0.75rem;\n  border-radius: 0.25rem;\n  outline: none; }\n\n.search-form__button {\n  position: absolute;\n  right: 25px;\n  top: 16px; }\n\n.song-list {\n  margin: 0 auto;\n  position: absolute;\n  overflow: auto;\n  top: 96px;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  text-align: left; }\n  .song-list--cart {\n    position: absolute;\n    width: 100%;\n    left: 100%;\n    bottom: 0; }\n  .song-list__song {\n    border-bottom: 1px solid #f3f3f3; }\n  .song-list__song-artist {\n    color: #888; }\n  .song-list__song-name {\n    font-size: 18px; }\n  .song-list__add-to-cart {\n    background: url(https://icongr.am/clarity/plus-circle.svg) 50% 50% no-repeat;\n    width: 35px; }\n    .song-list__add-to-cart:disabled {\n      background: url(https://icongr.am/clarity/success.svg?color=1a9f60) 50% 50% no-repeat; }\n  .song-list__remove-from-cart {\n    background: url(https://icongr.am/clarity/close.svg) 50% 50% no-repeat;\n    width: 35px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background: #36D1DC;\n  background: -webkit-linear-gradient(to left, #5B86E5, #36D1DC);\n  background: linear-gradient(to left, #5B86E5, #36D1DC); }\n\nbutton {\n  border: none;\n  cursor: pointer; }\n  button:focus {\n    outline: none; }\n\ninput::placeholder {\n  color: #888; }\n\n.row-flex {\n  display: flex; }\n  .row-flex .col-flex {\n    flex: 1 1 auto; }\n", ""]);
 
 // exports
 
@@ -22031,7 +22031,7 @@ var AppView = _backbone2.default.View.extend({
     template: _app2.default,
 
     events: {
-        "click .tabs__item": "_addClassActive"
+        "change input[type=radio]": "_addClassActive"
     },
 
     initialize: function initialize() {
@@ -22087,7 +22087,7 @@ var AppView = _backbone2.default.View.extend({
     _submit: function _submit(value) {
         //Set the search list tab
         this.$el.find('input[name=tab][value=search]').prop('checked', true);
-
+        this._addClassActive();
         //Return the promise of the ajax
         //The Function search() call the fetch with the value
         return this.searchCollection.search(value);
@@ -22117,12 +22117,14 @@ var AppView = _backbone2.default.View.extend({
         if (this.cartCollection.get(id)) this.cartCollection.remove(model);
     },
 
-    _addClassActive: function _addClassActive(e) {
-        var currentElement = this.$(e.currentTarget);
-
-        this.$('.tabs__item').removeClass('tabs__item--active');
-
-        if (!currentElement.hasClass('tabs__item--active')) currentElement.addClass('tabs__item--active');
+    _addClassActive: function _addClassActive() {
+        if (this.$el.find('input[name=tab][value=search]').is(':checked')) {
+            this.$('label[for=search-result]').addClass('tabs__item--active');
+            this.$('label[for=cart]').removeClass('tabs__item--active');
+        } else {
+            this.$('label[for=search-result]').removeClass('tabs__item--active');
+            this.$('label[for=cart]').addClass('tabs__item--active');
+        }
     }
 });
 exports.default = AppView;
@@ -24038,7 +24040,7 @@ module.exports = function (obj) {
 obj || (obj = {});
 var __t, __p = '';
 with (obj) {
-__p += '<div class="container-fluid text-center">\n    <header class="justify-content-center align-items-center search-bar"></header>\n    <div class="tabs list-unstyled row-flex m-0">\n        <label class="tabs__item col-flex m-0" for="search-result">List</label>\n        <label class="tabs__item col-flex m-0" for="cart">Cart</label>\n    </div>\n    <input type="radio" id="search-result" name="tab" value="search" checked="checked"/>\n    <input type="radio" id="cart" name="tab" value="tab" />\n    <div class="js-search-result song-list"></div>\n    <div class="js-cart song-list song-list--cart"></div>\n</div>\n';
+__p += '<div class="container-fluid text-center">\n    <header class="justify-content-center align-items-center search-bar"></header>\n    <div class="tabs list-unstyled row-flex m-0">\n        <label class="tabs__item tabs__item--active col-flex m-0" for="search-result">List</label>\n        <label class="tabs__item col-flex m-0" for="cart">Cart</label>\n    </div>\n    <input type="radio" id="search-result" name="tab" value="search" checked="checked" />\n    <input type="radio" id="cart" name="tab" value="tab" />\n    <div class="js-search-result song-list"></div>\n    <div class="js-cart song-list song-list--cart"></div>\n</div>\n';
 
 }
 return __p

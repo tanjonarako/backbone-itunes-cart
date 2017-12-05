@@ -13,7 +13,7 @@ var AppView = Backbone.View.extend({
     template: template,
 
     events: {
-        "click .tabs__item": "_addClassActive"
+        "change input[type=radio]": "_addClassActive"
     },
 
     initialize: function(){
@@ -69,7 +69,7 @@ var AppView = Backbone.View.extend({
     _submit: function(value) {
         //Set the search list tab
         this.$el.find('input[name=tab][value=search]').prop('checked', true);
-
+        this._addClassActive();
         //Return the promise of the ajax
         //The Function search() call the fetch with the value
         return this.searchCollection.search(value);
@@ -103,13 +103,14 @@ var AppView = Backbone.View.extend({
             this.cartCollection.remove(model);
     },
 
-    _addClassActive: function(e) {
-        const currentElement = this.$(e.currentTarget);
-
-        this.$('.tabs__item').removeClass('tabs__item--active');
-
-        if (!currentElement.hasClass('tabs__item--active'))
-            currentElement.addClass('tabs__item--active');
+    _addClassActive: function() {
+        if (this.$el.find('input[name=tab][value=search]').is(':checked')) {
+            this.$('label[for=search-result]').addClass('tabs__item--active');
+            this.$('label[for=cart]').removeClass('tabs__item--active');
+        } else {
+            this.$('label[for=search-result]').removeClass('tabs__item--active');
+            this.$('label[for=cart]').addClass('tabs__item--active');
+        }
     }
 });
 export default AppView;

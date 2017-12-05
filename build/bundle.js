@@ -22114,7 +22114,9 @@ var AppView = _backbone2.default.View.extend({
         if (model) model.set({ disabled: false });
 
         //If the song exist in the cart, remove it.
-        if (this.cartCollection.get(id)) this.cartCollection.remove(model);
+        if (this.cartCollection.get(id)) {
+            this.cartCollection.remove(this.cartCollection.get(id));
+        }
     },
 
     _addClassActive: function _addClassActive() {

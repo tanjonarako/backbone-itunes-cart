@@ -62,4 +62,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+
+    &__icon {
+        background-color: #F3F3F3;
+        border-radius: 56px;
+    }
 }
